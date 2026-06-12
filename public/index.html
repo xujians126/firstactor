@@ -35,7 +35,7 @@
 
     const client = createClient(window.location.origin + "/api/rivet");
     const playerId = crypto.randomUUID();
-    const game = client.game.getOrCreate(["lobby"]);
+    const game = client.game.getOrCreate(["test-lobby"]);
     const connection = game.connect({ params: { playerId } });
 
     let myMark = null;
