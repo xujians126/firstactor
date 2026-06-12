@@ -32,8 +32,8 @@ export const game = actor({
 		playerJoined: event<{ mark: Player; playerId: string }>(),
 		gameOver: event<{ winner: Player | "draw" }>(),
 	},
-	createConnState: (c, params: { playerId: string }): ConnState => ({
-		playerId: params.playerId,
+	createConnState: (c, params?: { playerId?: string }): ConnState => ({
+		playerId: params?.playerId || crypto.randomUUID(),
 		assignedMark: null,
 	}),
 	onConnect: (c, conn) => {
