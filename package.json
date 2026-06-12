@@ -1,0 +1,14 @@
+{
+  "name": "rivetkit-tictactoe",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npx tsx --watch index.ts",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.14",
+    "hono": "^4.12.25",
+    "rivetkit": "latest"
+  }
+}
